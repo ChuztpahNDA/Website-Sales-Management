@@ -1,3 +1,17 @@
+## Một vài nét về dự án
+- Đây là một web site quản lý bán hàng cơ bản cho các shop.
+- Có chức năng thêm, xóa, sửa (sản phẩm, khách hàng, đơn hàng).
+- Thống kê báo cáo bán hàng cho shop trong quá trình bán.
+
+## Công nghệ sử dụng
+- Laravel 9.19
+- Boostrap 5.2.3
+- Awesome 4.7.0
+- Chart js 4.2.1
+
+
+## Đôi nét về Laravel
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
