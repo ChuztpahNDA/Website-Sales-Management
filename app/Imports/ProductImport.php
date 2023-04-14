@@ -2,9 +2,9 @@
 
 namespace App\Imports;
 
+use App\Models\products as ModelsProducts;
 use Illuminate\Support\Collection;
 use Maatwebsite\Excel\Concerns\ToCollection;
-use App\Models\products;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
 use Maatwebsite\Excel\Concerns\WithValidation;
 
@@ -13,6 +13,8 @@ class ProductImport implements ToCollection, WithHeadingRow, WithValidation
     /**
      * @param Collection $collection
      */
+    public $timestamps = true;
+
     public function collection(Collection $ListData)
     {
         // dd($rows);
@@ -25,8 +27,7 @@ class ProductImport implements ToCollection, WithHeadingRow, WithValidation
                 'purchaseProduct' => $row['purchaseproduct'],
                 'description' => $row['description'],
             ];
-
-            products::create($data);
+            ModelsProducts::create($data);
         }
     }
 

@@ -5,12 +5,17 @@
         <div class="alert alert-success">{{ $msg }}</div>
     @endif
     <h1>Danh sách khách hàng</h1>
+    {{-- button create customers --}}
+    <div class="d-flex mb-3 mb-lg-4 justify-content-end">
+        <a href="{{route('addCustomers')}}" class="btn btn-primary">Tạo khách hàng</a>
+    </div>
     <table id="myTable" class="table table-hover">
         <thead>
             <tr>
                 <th>STT</th>
                 <th>Tên Khách Hàng</th>
-                <th>Số điện thoại</th>
+                <th>Số điện
+                    thoại</th>
                 <th>Địa chỉ</th>
                 <th>Sửa</th>
                 <th>Xóa</th>

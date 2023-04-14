@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-    <form class="mx-1 mx-md-4" action="{{ route('addProducts') }}" method="POST" enctype="multipart/form-data">
+    <form class="mx-1 mx-md-4" action="{{ route('post-addProducts') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="row">
             <div class="d-flex flex-row align-items-center mb-4 col-7">

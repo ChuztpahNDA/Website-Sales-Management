@@ -2,10 +2,9 @@
 
 namespace App\Http\Middleware;
 
-use App\Models\Users;
 use Closure;
 use Illuminate\Http\Request;
-use App\Http\Controllers;
+use App\Models\User_repository;
 
 class CheckLoginPermission
 {
@@ -19,7 +18,7 @@ class CheckLoginPermission
     public function handle(Request $request, Closure $next)
     {
         $email = session('email');
-        $users = new Users();
+        $users = new User_repository();
         $status = $users->getUser($email)[0]->status;
         if(!empty($status)){
             if($status == 'on'){

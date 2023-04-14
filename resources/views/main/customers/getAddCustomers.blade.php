@@ -11,7 +11,7 @@
                 <div class="d-flex flex-row align-items-center mb-4 w-50">
                     <div class="form-outline flex-fill mb-0">
                         <label class="form-label" for="">Tên khách hàng</label>
-                        <input class="form-control" type="text" name="nameCustomer">
+                        <input class="form-control" type="text" name="nameCustomer" value="{{old('nameCustomer') ?? ''}}">
                         @error('nameCustomer')
                             <span style="color: red"> {{ $message }} </span>
                         @enderror
@@ -20,7 +20,7 @@
                 <div class="d-flex flex-row align-items-center mb-4 w-50">
                     <div class="form-outline flex-fill mb-0">
                         <label class="form-label" for="">Số điện thoại</label>
-                        <input class="form-control" type="tel" name="phoneNumber">
+                        <input class="form-control" type="tel" name="phoneNumber" value="{{old('phoneNumber') ?? ''}}">
                         @error('phoneNumber')
                             <span style="color: red"> {{ $message }} </span>
                         @enderror
@@ -29,7 +29,7 @@
                 <div class="d-flex flex-row align-items-center mb-4 w-50">
                     <div class="form-outline flex-fill mb-0">
                         <label class="form-label" for="">Địa chỉ chi tiết</label>
-                        <input class="form-control" type="text" name="Address">
+                        <input class="form-control" type="text" name="Address" value="{{old('Address') ?? ''}}">
                         @error('Address')
                             <span style="color: red"> {{ $message }} </span>
                         @enderror

@@ -46,7 +46,7 @@
                                             <div class="form-outline flex-fill mb-0">
                                                 <label class="form-label">Email</label>
                                                 <input type="email" name="RegisterEmail" class="form-control"
-                                                    {{ old('RegisterEmail') ?? '' }} />
+                                                    value="{{old('RegisterEmail') ?? '' }}" />
                                                 @error('RegisterEmail')
                                                     <span style="color: red"> {{ $message }} </span>
                                                 @enderror
@@ -59,7 +59,7 @@
                                             <div class="form-outline flex-fill mb-0">
                                                 <label class="form-label">Ngày sinh</label>
                                                 <input type="date" name="RegisterBirthday" class="form-control"
-                                                    {{ old('RegisterBirthday') ?? '' }} />
+                                                    value="{{ old('RegisterBirthday') ?? '' }}" />
                                                 @error('RegisterBirthday')
                                                     <span style="color: red"> {{ $message }} </span>
                                                 @enderror
@@ -106,7 +106,7 @@
                                                 I agree all statements in <a href="#!">Terms of service</a>
                                             </label>
                                         </div>
-                                        
+
                                         <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                                             <button type="submit" class="btn btn-primary btn-lg"
                                                 name="btnRegister">Register</button>
