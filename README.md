@@ -1,6 +1,7 @@
 ## Một vài nét về dự án
 - Đây là một web site quản lý bán hàng cơ bản cho các shop.
 - Có chức năng thêm, xóa, sửa (sản phẩm, khách hàng, đơn hàng).
+- Xuất thông tin dữ liệu từ phần mền dưới dạng file excel.
 - Thống kê báo cáo bán hàng cho shop trong quá trình bán.
 
 ## Công nghệ sử dụng
@@ -8,6 +9,8 @@
 - Boostrap 5.2.3
 - Awesome 4.7.0
 - Chart js 4.2.1
+
+### [video Demo website]](...)
 
 
 ## Đôi nét về Laravel
