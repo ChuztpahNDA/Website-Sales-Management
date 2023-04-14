@@ -25,7 +25,7 @@ function showCustomer()
     document.getElementById('address').innerHTML = arrDetail[2];
 
     // add ID to href
-    document.getElementById('editCustomer').href = "/admin/editCustomer/".concat(arrDetail[3]);
+    document.getElementById('editCustomer').href = "/admin/Customer/".concat(arrDetail[3]).concat('/edit');
   }
 
 // add div product

@@ -11,16 +11,14 @@
     </thead>
     <tbody>
         @if (!empty($products))
-            @foreach ($products as $product)
-                <tr>
-                    <td>{{ $product->URLImages }}</td>
-                    <td>{{ $product->nameProduct }}</td>
-                    <td>{{ $product->quatity }}</td>
-                    <td>{{ $product->priceProduct }}</td>
-                    <td>{{ $product->purchaseProduct }}</td>
-                    <td>{{ $product->description }}</td>
-                </tr>
-            @endforeach
+            <tr>
+                <td>{{ $products['URLImages'] }}</td>
+                <td>{{ $products['nameProduct'] }}</td>
+                <td>{{ $products['quatity'] }}</td>
+                <td>{{ $products['priceProduct'] }}</td>
+                <td>{{ $products['purchaseProduct'] }}</td>
+                <td>{{ $products['description'] }}</td>
+            </tr>
         @endif
     </tbody>
 </table>

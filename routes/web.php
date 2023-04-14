@@ -45,19 +45,19 @@ Route::middleware('auth.admin')->prefix('admin')->group(function () {
 
     //========================
     // Product
-    Route::get('getProducts', [ProductController::class, 'getProducts'])->name('getProducts');
+    Route::get('Products', [ProductController::class, 'getProducts'])->name('getProducts');
 
     // add products
     Route::get('addProduct', [ProductController::class, 'getAddProducts'])->name('addProducts');
     Route::post('addProduct', [ProductController::class, 'AddProducts'])->name('post-addProducts');
 
     // edit products
-    Route::get('editProduct/{id?}', [ProductController::class, 'getEditProducts'])->name('editProducts');
+    Route::get('Product/{id?}/edit', [ProductController::class, 'getEditProducts'])->name('editProducts');
     Route::post('editProduct', [ProductController::class, 'editProduct'])->name('post-edit');
 
     //delete products
-    Route::get('getDeleteProduct/{id?}', [ProductController::class, 'getDeleteProducts'])->name('deleteProducts');
-    Route::post('deleteProduct', [ProductController::class, 'deleteProduct'])->name('post-delete');
+    Route::get('Product/{id?}/delete', [ProductController::class, 'getDeleteProducts'])->name('deleteProducts');
+    Route::post('deleteProduct', [ProductController::class, 'deleteProduct'])->name('product-delete');
 
     //import file and export file products
     Route::get('import', [ProductController::class, 'getimportFilePrduct'])->name('importfileProducts');
@@ -72,18 +72,18 @@ Route::middleware('auth.admin')->prefix('admin')->group(function () {
 
     //============================
     // Khách hàng
-    Route::get('getCustomers', [CustomerController::class, 'getCustomers'])->name('getCustomers');
+    Route::get('Customers', [CustomerController::class, 'getCustomers'])->name('getCustomers');
     Route::get('addCustomers', [CustomerController::class, 'getAddCustomers'])->name('addCustomers');
     Route::post('addCustomers', [CustomerController::class, 'addCustomers'])->name('post-addCustomers');
 
 
     // edit customer
-    Route::get('editCustomer/{id?}', [CustomerController::class, 'getEditCustomers'])->name('editCustomers');
+    Route::get('Customer/{id?}/edit', [CustomerController::class, 'getEditCustomers'])->name('editCustomers');
     Route::post('editCustomer', [CustomerController::class, 'editCustomer'])->name('post-editCustomers');
 
     //delete customer
-    Route::get('getDeleteCustomer/{id?}', [CustomerController::class, 'getDeleteProducts'])->name('deleteCustomers');
-    Route::post('deleteCustomer', [CustomerController::class, 'deleteProduct'])->name('post-delete');
+    Route::get('Customer/{id?}/delete', [CustomerController::class, 'getDeleteCustomer'])->name('deleteCustomers');
+    Route::post('deleteCustomer', [CustomerController::class, 'deleteCustomer'])->name('customer-delete');
 
 
     // Order

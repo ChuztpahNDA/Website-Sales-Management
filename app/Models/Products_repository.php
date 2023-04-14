@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 class Products_repository extends Model
 {
     use HasFactory;
+    public $timestamps = true;
     // Products
     public function addProducts($data)
     {
@@ -20,7 +21,7 @@ class Products_repository extends Model
     {
         return DB::table('products')
             ->select('*')
-            ->orderBy("created_at", 'asc')
+            ->orderBy("created_at", 'desc')
             ->get();
     }
 

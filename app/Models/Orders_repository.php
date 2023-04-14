@@ -15,13 +15,4 @@ class Orders_repository extends Model
     {
         DB::table('orders')->insert([$data]);
     }
-
-    // get order by ID transactions
-    public function getOrderByIDTransaction($id)
-    {
-        return DB::table('orders')
-                ->select('*')
-                ->where("ID_Transactions", "=", $id)
-                ->get();
-    }
 }

@@ -56,7 +56,7 @@ class ReportController extends Controller
                 // get total Revenue
                 $RevenueOneDay += $transaction->TotalPayment - $transaction->Discount;
                 // get total Purchase
-                $orders = $this->Orders_DB->getOrderByIDTransaction($transaction->ID);
+                $orders = $this->transactions_DB->getOrderByIDTransaction($transaction->ID);
                 foreach ($orders as $order_) {
                     $product = $this->products_DB->getProductName($order_->Products)[0];
                     $purchase += $product->purchaseProduct * $order_->quatity_Products;

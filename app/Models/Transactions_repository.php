@@ -69,4 +69,13 @@ class Transactions_repository extends Model
     {
         return DB::table('transactions')->max('ID');
     }
+
+    // get order by ID transactions
+    public function getOrderByIDTransaction($id)
+    {
+        return DB::table('orders')
+                ->select('*')
+                ->where("ID_Transactions", "=", $id)
+                ->get();
+    }
 }

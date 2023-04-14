@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Imports\ProductImport;
 use App\Exports\template;
+use App\Models\products;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Models\Products_repository;
 
@@ -56,7 +57,7 @@ class ProductController extends Controller
         $purchaseProducts = $request->purchase_products;
         $description_products = $request->description_products;
         $nameImages = $request->productsImage;
-        $created_at = date('d-m-Y H:i:s');
+        $created_at = date('Y-m-d H:i:s');
         $nameDB = '';
         if (!empty($nameImages)) {
             // lấy phần mở rộng của file image
@@ -146,7 +147,7 @@ class ProductController extends Controller
                 'purchaseProduct' => $purchaseProducts,
                 'URLImages' => $nameDB,
                 'description' => $description_products,
-                'updated_at' => date('d-m-Y H:i:s')
+                'updated_at' => date('Y-m-d H:i:s')
             ];
             $this->Products_DB->editProduct($id, $data);
             $msg = 'Sửa sản phẩm thành công';
@@ -179,12 +180,10 @@ class ProductController extends Controller
     public function deleteProduct()
     {
         $id = session('id');
-
         // delete product
         $this->Products_DB->deleteProduct($id);
 
         // get product list
-
         $productlists = $this->Products_DB->getProducts();
         $STT = 1;
         return view('main.products.getProducts', ['STT' => $STT, 'msg' => 'Xóa sản phẩm thành công', 'productlists' => $productlists]);

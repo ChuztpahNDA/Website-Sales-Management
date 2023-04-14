@@ -15,7 +15,6 @@ class template implements FromView
     public function view(): View
     {
         if(!empty($this->products)){
-            // dd($this->products);
             return view('main.products.exportTemplate', [
                 'products' => $this -> products
             ]);

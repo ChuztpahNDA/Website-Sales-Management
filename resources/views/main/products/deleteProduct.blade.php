@@ -1,11 +1,11 @@
 @extends('layouts.main')
 
 @section('content')
-    <form class="mx-1 mx-md-4" action="{{ route('post-delete') }}" method="POST" enctype="multipart/form-data">
+    <form class="mx-1 mx-md-4" action="{{ route('product-delete') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="row">
             <div class="d-flex flex-row align-items-center mb-4">
-                <h2>Sửa sản phẩm</h2>
+                <h2>Xóa sản phẩm</h2>
             </div>
 
             <div class="col-5">
