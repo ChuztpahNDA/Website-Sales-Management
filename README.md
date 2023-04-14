@@ -10,7 +10,7 @@
 - Awesome 4.7.0
 - Chart js 4.2.1
 
-### [video Demo website]](...)
+### [video Demo website](...)
 
 
 ## Đôi nét về Laravel
