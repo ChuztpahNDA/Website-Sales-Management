@@ -6,10 +6,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 
-class Users extends Model
+class User_repository extends Model
 {
     use HasFactory;
-
     public function addUser($fullName, $email, $password, $birthDay, $status)
     {
         DB::table('useraccounts')->insert([

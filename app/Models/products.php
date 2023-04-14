@@ -9,8 +9,8 @@ class products extends Model
 {
     use HasFactory;
 
-    public $timestamps = false;
-    
+    public $timestamps = true;
+
     protected $fillable = [
         'URLImages',
         'nameProduct',
@@ -18,5 +18,6 @@ class products extends Model
         'priceProduct',
         'purchaseProduct',
         'description',
+        'created_at'
     ];
 }

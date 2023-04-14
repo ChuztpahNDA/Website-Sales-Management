@@ -4,8 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Models\Users;
-use Illuminate\Support\Facades\Redis;
+use App\Models\User_repository;
 use Illuminate\Support\Facades\Hash;
 
 class UsersController extends Controller
@@ -15,7 +14,7 @@ class UsersController extends Controller
 
     public function __construct()
     {
-        $this->users = new Users();
+        $this->users = new User_repository();
     }
 
     public function index()
@@ -47,9 +46,8 @@ class UsersController extends Controller
         );
 
         // Kiêm tra tài khoản mật khẩu trong DB
-        $users = new Users();
         $email = $request->Users_ID;
-        $userDetail = $users->getUser($email)[0];
+        $userDetail = $this->users->getUser($email)[0];
         if (!Hash::Check($request->Users_Password, $userDetail->password)) {
             $err = "Mật khẩu hoặc tài khoản không chính xác!";
             return view('login.login', [
