@@ -6,11 +6,11 @@
 
 ## Công nghệ sử dụng
 - Laravel 9.19
-- Boostrap 5.2.3
+- Bootstrap 5.2.3
 - Awesome 4.7.0
 - Chart js 4.2.1
 
-### [video Demo website](...)
+### [video Demo website](https://youtu.be/axB1UsYb5uE)
 
 
 ## Đôi nét về Laravel
